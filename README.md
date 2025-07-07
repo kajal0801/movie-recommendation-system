@@ -27,4 +27,9 @@ Users can enter a keyword (e.g., "action", "magic", "sci-fi") and receive movie 
 ## 🔗 About
 
 This project demonstrates basic full-stack web development concepts, including building REST APIs with Flask and integrating them with a modern frontend.
+## 💻 Current Progress
+
+✅ Basic Flask app structure added.  
+✅ Initial placeholder HTML page created.  
+🚧 More features coming soon!
 
