@@ -1,35 +1,46 @@
+🎬 Movie Recommendation System
 
-# 🎬 Movie Recommendation System
+A simple movie recommendation system built using Python (Flask), HTML, CSS, and JavaScript. Users can search movies by keyword (e.g., "action", "magic", "sci-fi") and view details such as title, poster, and overview. Clicking a movie poster opens its trailer on YouTube via a direct search link.
 
-A simple movie recommendation system using Python (Flask) and HTML/CSS/JavaScript.  
+💻 Technologies Used
 
-Users can enter a keyword (e.g., "action", "magic", "sci-fi") and receive movie suggestions that match their interests.
+Python
 
-## 💻 Technologies Used
+Flask
 
-- Python
-- Flask
-- HTML5 & CSS3
-- JavaScript
+HTML5 & CSS3
 
-## 🚀 Features
+JavaScript
 
-- Keyword-based movie search
-- Real-time dynamic recommendations
-- Clean and simple web interface
+OMDb API (for movie data)
 
-## ⚙️ Future Enhancements
+🚀 Features
 
-- Use advanced similarity algorithms (TF-IDF or embeddings)
-- Store data in a database
-- Deploy to cloud platforms (e.g., Render, Vercel)
+Keyword-based movie search with real movie details
 
-## 🔗 About
+Clickable posters opening trailers on YouTube
 
-This project demonstrates basic full-stack web development concepts, including building REST APIs with Flask and integrating them with a modern frontend.
-## 💻 Current Progress
+Real-time dynamic recommendations
 
-✅ Basic Flask app structure added.  
-✅ Initial placeholder HTML page created.  
-🚧 More features coming soon!
+Clean, responsive web interface
 
+⚙️ Future Enhancements
+
+Use YouTube API to fetch official trailers
+
+Add advanced recommendation algorithms (TF-IDF or embeddings)
+
+Store user search history and preferences in a database
+
+Deploy on cloud platforms (Render, Vercel, or Heroku)
+
+🔗 About
+
+This project demonstrates full-stack web development concepts, including REST API integration, Flask backend development, and building an interactive modern frontend.
+
+💻 Current Progress
+
+✅ Integrated OMDb API for movie details.
+✅ Added clickable YouTube search links for trailers.
+✅ Flask backend and responsive frontend completed.
+🚧 Further enhancements and deployment planned!
