@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Movie Recommendation System</title>
+    <title>Movie Search</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .movie { display: inline-block; margin: 20px; }
+        img { width: 200px; height: 300px; border-radius: 10px; cursor: pointer; }
+        form { margin: 20px; }
+    </style>
 </head>
 <body>
-    <h1>🎬 Movie Recommendation System</h1>
-    <p>This is a work in progress. Stay tuned!</p>
+    <h1>Search Movies</h1>
+    <form method="POST">
+        <input type="text" name="movie_name" placeholder="Enter movie name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% for movie in movies %}
+    <div class="movie">
+        <a href="https://www.youtube.com/results?search_query={{ movie.Title }} trailer" target="_blank">
+            <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+        </a>
+        <h3>{{ movie.Title }} ({{ movie.Year }})</h3>
+    </div>
+    {% endfor %}
 </body>
 </html>
