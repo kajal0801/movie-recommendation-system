@@ -4,9 +4,10 @@
     <title>Movie Search</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
-        .movie { display: inline-block; margin: 20px; }
-        img { width: 200px; height: 300px; border-radius: 10px; cursor: pointer; }
+        .movie { display: inline-block; margin: 20px; width: 220px; vertical-align: top; }
+        img { width: 200px; height: 300px; border-radius: 10px; cursor: pointer; object-fit: cover; }
         form { margin: 20px; }
+        .msg { color: #c33; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -16,10 +17,18 @@
         <button type="submit">Search</button>
     </form>
 
+    {% if error_msg %}
+      <div class="msg">{{ error_msg }}</div>
+    {% endif %}
+
     {% for movie in movies %}
     <div class="movie">
-        <a href="https://www.youtube.com/results?search_query={{ movie.Title }} trailer" target="_blank">
-            <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+        <a href="https://www.youtube.com/results?search_query={{ movie.yt_query }}" target="_blank">
+            {% if movie.Poster and movie.Poster != 'N/A' %}
+              <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+            {% else %}
+              <img src="https://via.placeholder.com/200x300?text=No+Image" alt="No poster">
+            {% endif %}
         </a>
         <h3>{{ movie.Title }} ({{ movie.Year }})</h3>
     </div>
